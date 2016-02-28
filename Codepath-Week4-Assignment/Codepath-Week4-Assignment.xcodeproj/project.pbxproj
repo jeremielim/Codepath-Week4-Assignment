@@ -17,6 +17,8 @@
 		CF2140381C839D32001CE8B6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2140371C839D32001CE8B6 /* HomeViewController.swift */; };
 		CF21403A1C839DE9001CE8B6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2140391C839DE9001CE8B6 /* SearchViewController.swift */; };
 		CF21403D1C839FB4001CE8B6 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21403C1C839FB4001CE8B6 /* ComposeViewController.swift */; };
+		CF21403F1C83A121001CE8B6 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21403E1C83A121001CE8B6 /* AccountViewController.swift */; };
+		CF2140411C83A1B1001CE8B6 /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2140401C83A1B1001CE8B6 /* TrendingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		CF2140371C839D32001CE8B6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CF2140391C839DE9001CE8B6 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CF21403C1C839FB4001CE8B6 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		CF21403E1C83A121001CE8B6 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		CF2140401C83A1B1001CE8B6 /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,8 @@
 		CF21403B1C839F87001CE8B6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CF2140401C83A1B1001CE8B6 /* TrendingViewController.swift */,
+				CF21403E1C83A121001CE8B6 /* AccountViewController.swift */,
 				CF21400B1C834E77001CE8B6 /* ViewController.swift */,
 				CF2140391C839DE9001CE8B6 /* SearchViewController.swift */,
 				CF2140371C839D32001CE8B6 /* HomeViewController.swift */,
@@ -273,8 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF2140411C83A1B1001CE8B6 /* TrendingViewController.swift in Sources */,
 				CF21403D1C839FB4001CE8B6 /* ComposeViewController.swift in Sources */,
 				CF21400C1C834E77001CE8B6 /* ViewController.swift in Sources */,
+				CF21403F1C83A121001CE8B6 /* AccountViewController.swift in Sources */,
 				CF21400A1C834E77001CE8B6 /* AppDelegate.swift in Sources */,
 				CF21403A1C839DE9001CE8B6 /* SearchViewController.swift in Sources */,
 				CF2140381C839D32001CE8B6 /* HomeViewController.swift in Sources */,
