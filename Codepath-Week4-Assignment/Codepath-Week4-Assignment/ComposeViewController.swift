@@ -65,7 +65,12 @@ class ComposeViewController: UIViewController {
         
         for button in self.buttons {
             UIView.animateWithDuration(0.3, delay: Double(index)/16, usingSpringWithDamping: 0.8, initialSpringVelocity: 1, options: [], animations: { () -> Void in
+                
                 button.center.y = self.buttonsOriginY[index]
+                
+
+                
+                
                 }, completion: nil)
             
             index++
