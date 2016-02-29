@@ -68,27 +68,28 @@ class ComposeViewController: UIViewController {
         }
     }
     
-    func closeModal() {
-        dismissViewControllerAnimated(false, completion: nil)
-    }
-    
-    func closeIconAnimate(closure: () -> ()) {
-        var index = 0
-        
-        
-        for button in self.buttons {
-            UIView.animateWithDuration(0.3, delay: Double(index)/16, usingSpringWithDamping: 0.8, initialSpringVelocity: 1, options: [], animations: { () -> Void in
-                button.center.y -= 568
-                
-                }, completion: nil)
-            
-            index++
-        }
-        closure()
-    }
-    
     @IBAction func nevermindButton(sender: AnyObject) {
-        closeIconAnimate(closeModal)
+        
+        for index in 0...5 {
+            
+            if index < 5 {
+                UIView.animateWithDuration(0.3, delay: Double(index)/16, options: [], animations: { () -> Void in
+                    self.buttons[index].center.y -= 568
+                    print(self.buttons[index].center.x)
+                    
+                    }, completion: nil)
+                
+            } else {
+                UIView.animateWithDuration(0.3, delay: Double(index)/16, options: [], animations: { () -> Void in
+                    self.buttons[index].center.y -= 568
+
+                    }, completion: { (Bool) -> Void in
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                })
+            }
+            
+        }
+        
     }
 
     /*
