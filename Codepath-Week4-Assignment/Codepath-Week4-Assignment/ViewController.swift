@@ -22,6 +22,10 @@ class ViewController: UIViewController {
     var selectedIndex: Int = 0
     var fadeTransition: FadeTransition!
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

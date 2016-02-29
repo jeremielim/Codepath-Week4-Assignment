@@ -20,18 +20,22 @@ class ComposeViewController: UIViewController {
     
     var buttons: [UIButton]!
     var buttonsOriginY: [CGFloat]!
-
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(red: 53.0/255.0, green: 66.0/255.0, blue: 84.0/255.0, alpha: 0.8)
+        self.view.backgroundColor = UIColor(red: 53.0/255.0, green: 66.0/255.0, blue: 84.0/255.0, alpha: 0.9)
         
         buttons = [
-            textButton,
             photoButton,
-            quoteButton,
-            linkButton,
             chatButton,
+            quoteButton,
+            textButton,
+            linkButton,
             videoButton
         ]
         
