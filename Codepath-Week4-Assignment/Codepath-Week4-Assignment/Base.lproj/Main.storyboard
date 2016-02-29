@@ -61,7 +61,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.80000000000000004" contentMode="scaleToFill" id="EC8-0B-vXG">
+                            <view contentMode="scaleToFill" id="EC8-0B-vXG">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -99,6 +99,9 @@
                                         <rect key="frame" x="0.0" y="515" width="320" height="53"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="nevermind"/>
+                                        <connections>
+                                            <action selector="nevermindButton:" destination="2VO-cO-fi1" eventType="touchUpInside" id="Jks-Ym-Mbd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16078431372549021" green="0.21176470588235294" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
@@ -106,6 +109,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="EC8-0B-vXG" id="0e7-MP-Bkp"/>
+                        <outlet property="chatButton" destination="8GX-ch-ZUI" id="G7g-gZ-bbz"/>
+                        <outlet property="linkButton" destination="6yv-08-Act" id="O67-B2-B3x"/>
+                        <outlet property="photoButton" destination="e53-hZ-Jby" id="ZkX-RC-4FP"/>
+                        <outlet property="quoteButton" destination="8jA-8F-BOX" id="Ew7-Ar-QOl"/>
+                        <outlet property="textButton" destination="LvY-Ay-4fA" id="8An-40-Noa"/>
+                        <outlet property="videoButton" destination="mUH-fG-90s" id="gXm-6S-4tg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PB9-9a-eW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,6 +200,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button" image="compose_button"/>
                                         <state key="selected" image="search_selected_icon"/>
+                                        <connections>
+                                            <segue destination="2VO-cO-fi1" kind="modal" animates="NO" id="qjj-cb-1rw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gJO-1m-Mhi" userLabel="Account">
                                         <rect key="frame" x="212" y="4" width="35" height="35"/>

@@ -39,9 +39,9 @@ class ViewController: UIViewController {
         viewControllers = [homeViewController, searchViewController, accountViewController, trendingViewController]
         
         
+        // Set initial tab
         buttons[selectedIndex].selected = true
         didPressTab(buttons[selectedIndex])
-        
         
         
 
