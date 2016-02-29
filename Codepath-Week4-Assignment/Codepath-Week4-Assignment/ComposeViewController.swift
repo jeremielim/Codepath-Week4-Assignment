@@ -24,6 +24,8 @@ class ComposeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(red: 53.0/255.0, green: 66.0/255.0, blue: 84.0/255.0, alpha: 0.8)
+        
         buttons = [
             textButton,
             photoButton,
@@ -41,8 +43,6 @@ class ComposeViewController: UIViewController {
             buttons[4].center.y,
             buttons[5].center.y
         ]
-        
-//        print(buttonsOriginY)
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,32 +59,36 @@ class ComposeViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         var index = 0
         
-        
-        
         for button in self.buttons {
             UIView.animateWithDuration(0.3, delay: Double(index)/16, usingSpringWithDamping: 0.8, initialSpringVelocity: 1, options: [], animations: { () -> Void in
                 button.center.y = self.buttonsOriginY[index]
                 }, completion: nil)
+            
             index++
         }
     }
     
-    @IBAction func nevermindButton(sender: AnyObject) {
+    func closeModal() {
+        dismissViewControllerAnimated(false, completion: nil)
+    }
+    
+    func closeIconAnimate(closure: () -> ()) {
         var index = 0
         
-        UIView.animateWithDuration(0.3, delay: 0, options: [], animations: { () -> Void in
-            
-            for button in self.buttons {
-                button.center.y = self.buttonsOriginY[index] - 100
-                
-                index++
-            }
-            
-            
-            }) { (Bool) -> Void in
-                self.dismissViewControllerAnimated(false, completion: nil)
-        }
         
+        for button in self.buttons {
+            UIView.animateWithDuration(0.3, delay: Double(index)/16, usingSpringWithDamping: 0.8, initialSpringVelocity: 1, options: [], animations: { () -> Void in
+                button.center.y -= 568
+                
+                }, completion: nil)
+            
+            index++
+        }
+        closure()
+    }
+    
+    @IBAction func nevermindButton(sender: AnyObject) {
+        closeIconAnimate(closeModal)
     }
 
     /*

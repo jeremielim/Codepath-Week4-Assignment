@@ -19,6 +19,9 @@
 		CF21403D1C839FB4001CE8B6 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21403C1C839FB4001CE8B6 /* ComposeViewController.swift */; };
 		CF21403F1C83A121001CE8B6 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21403E1C83A121001CE8B6 /* AccountViewController.swift */; };
 		CF2140411C83A1B1001CE8B6 /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2140401C83A1B1001CE8B6 /* TrendingViewController.swift */; };
+		CF9FB29E1C83D14900AC495E /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FB29C1C83D14900AC495E /* BaseTransition.swift */; };
+		CF9FB29F1C83D14900AC495E /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FB29D1C83D14900AC495E /* FadeTransition.swift */; };
+		CF9FB2A11C83D3AD00AC495E /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FB2A01C83D3AD00AC495E /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		CF21403C1C839FB4001CE8B6 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		CF21403E1C83A121001CE8B6 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		CF2140401C83A1B1001CE8B6 /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		CF9FB29C1C83D14900AC495E /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		CF9FB29D1C83D14900AC495E /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		CF9FB2A01C83D3AD00AC495E /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				CF2140091C834E77001CE8B6 /* AppDelegate.swift */,
+				CF9FB2A01C83D3AD00AC495E /* Common.swift */,
+				CF9FB29C1C83D14900AC495E /* BaseTransition.swift */,
+				CF9FB29D1C83D14900AC495E /* FadeTransition.swift */,
 				CF21403B1C839F87001CE8B6 /* View Controllers */,
 				CF21400D1C834E77001CE8B6 /* Main.storyboard */,
 				CF2140101C834E77001CE8B6 /* Assets.xcassets */,
@@ -280,11 +289,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF2140411C83A1B1001CE8B6 /* TrendingViewController.swift in Sources */,
+				CF9FB29F1C83D14900AC495E /* FadeTransition.swift in Sources */,
 				CF21403D1C839FB4001CE8B6 /* ComposeViewController.swift in Sources */,
 				CF21400C1C834E77001CE8B6 /* ViewController.swift in Sources */,
 				CF21403F1C83A121001CE8B6 /* AccountViewController.swift in Sources */,
 				CF21400A1C834E77001CE8B6 /* AppDelegate.swift in Sources */,
+				CF9FB29E1C83D14900AC495E /* BaseTransition.swift in Sources */,
 				CF21403A1C839DE9001CE8B6 /* SearchViewController.swift in Sources */,
+				CF9FB2A11C83D3AD00AC495E /* Common.swift in Sources */,
 				CF2140381C839D32001CE8B6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +522,7 @@
 				CF2140301C834E78001CE8B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF2140311C834E78001CE8B6 /* Build configuration list for PBXNativeTarget "Codepath-Week4-AssignmentTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +531,7 @@
 				CF2140331C834E78001CE8B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF2140341C834E78001CE8B6 /* Build configuration list for PBXNativeTarget "Codepath-Week4-AssignmentUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +540,7 @@
 				CF2140361C834E78001CE8B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

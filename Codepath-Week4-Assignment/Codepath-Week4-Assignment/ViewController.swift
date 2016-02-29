@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     var trendingViewController: UIViewController!
     var viewControllers: [UIViewController]!
     var selectedIndex: Int = 0
+    var fadeTransition: FadeTransition!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,14 +43,29 @@ class ViewController: UIViewController {
         // Set initial tab
         buttons[selectedIndex].selected = true
         didPressTab(buttons[selectedIndex])
-        
-        
-
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController.
+        let destinationViewController = segue.destinationViewController
+        
+        // Set the modal presentation style of your destinationViewController to be custom.
+        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+        
+        // Create a new instance of your fadeTransition.
+        fadeTransition = FadeTransition()
+        
+        // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
+        destinationViewController.transitioningDelegate = fadeTransition
+        
+        // Adjust the transition duration. (seconds)
+        fadeTransition.duration = 0.3
     }
     
     @IBAction func didPressTab(sender: UIButton) {
@@ -78,6 +94,8 @@ class ViewController: UIViewController {
         
         // Adjust the size of the ViewController view you are adding to match
         vc.view.frame = contentView.bounds
+        
+        // Append subview to main content
         contentView.addSubview(vc.view)
         
         // Call the viewDidAppear method of the ViewController you are adding
