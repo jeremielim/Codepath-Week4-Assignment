@@ -79,7 +79,6 @@ class ComposeViewController: UIViewController {
             if index < 5 {
                 UIView.animateWithDuration(0.3, delay: Double(index)/16, options: [], animations: { () -> Void in
                     self.buttons[index].center.y -= 568
-                    print(self.buttons[index].center.x)
                     
                     }, completion: nil)
                 

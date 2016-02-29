@@ -22,6 +22,7 @@
 		CF9FB29E1C83D14900AC495E /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FB29C1C83D14900AC495E /* BaseTransition.swift */; };
 		CF9FB29F1C83D14900AC495E /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FB29D1C83D14900AC495E /* FadeTransition.swift */; };
 		CF9FB2A11C83D3AD00AC495E /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FB2A01C83D3AD00AC495E /* Common.swift */; };
+		CFEE8E151C840D97007327D8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE8E141C840D97007327D8 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		CF9FB29C1C83D14900AC495E /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		CF9FB29D1C83D14900AC495E /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 		CF9FB2A01C83D3AD00AC495E /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		CFEE8E141C840D97007327D8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				CF2140391C839DE9001CE8B6 /* SearchViewController.swift */,
 				CF2140371C839D32001CE8B6 /* HomeViewController.swift */,
 				CF21403C1C839FB4001CE8B6 /* ComposeViewController.swift */,
+				CFEE8E141C840D97007327D8 /* LoginViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				CF21403A1C839DE9001CE8B6 /* SearchViewController.swift in Sources */,
 				CF9FB2A11C83D3AD00AC495E /* Common.swift in Sources */,
 				CF2140381C839D32001CE8B6 /* HomeViewController.swift in Sources */,
+				CFEE8E151C840D97007327D8 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

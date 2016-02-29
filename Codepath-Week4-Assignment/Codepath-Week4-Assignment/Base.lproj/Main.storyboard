@@ -247,10 +247,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.25882352939999997" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="explore_popup" id="DCS-Kd-1YA">
+                                <rect key="frame" x="-3" y="454" width="185" height="77"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="bubbleImageVIew" destination="DCS-Kd-1YA" id="WnJ-GL-so1"/>
                         <outlet property="contentView" destination="vRI-Uf-fCI" id="y0G-yk-Fi9"/>
                         <outletCollection property="buttons" destination="fDb-dJ-18P" collectionClass="NSMutableArray" id="8Dn-pV-uLn"/>
                         <outletCollection property="buttons" destination="Vuu-1l-gxR" collectionClass="NSMutableArray" id="Ysc-rt-B59"/>
@@ -262,21 +267,50 @@
             </objects>
             <point key="canvasLocation" x="234" y="348"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="yu3-lQ-S4L">
             <objects>
-                <viewController id="SmK-d5-Gry" sceneMemberID="viewController">
+                <viewController id="SmK-d5-Gry" customClass="LoginViewController" customModule="Codepath_Week4_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aLb-o9-4IQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="dZt-r8-Tpb">
-                                <rect key="frame" x="10" y="218" width="300" height="132"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
+                            <view opaque="NO" contentMode="scaleToFill" id="aF2-yb-xUe">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="dZt-r8-Tpb">
+                                        <rect key="frame" x="12" y="153" width="300" height="132"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" id="h3i-vz-uZM">
+                                        <rect key="frame" x="22" y="153" width="288" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" id="Ls3-zr-Tj6">
+                                                <rect key="frame" x="8" y="5" width="280" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d9e-6Y-z9p" userLabel="Cancel">
+                                        <rect key="frame" x="12" y="238" width="150" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="didPressCancelButton:" destination="SmK-d5-Gry" eventType="touchUpInside" id="9HX-qC-5OX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="Ls3-zr-Tj6" id="Qri-dc-73z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dx0-8M-XwD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -289,6 +323,7 @@
         <image name="account_selected_icon" width="35" height="35"/>
         <image name="chat_icon" width="75" height="96"/>
         <image name="compose_button" width="50" height="35"/>
+        <image name="explore_popup" width="185" height="77"/>
         <image name="home" width="320" height="524"/>
         <image name="home_icon" width="35" height="35"/>
         <image name="home_overlay" width="320" height="100"/>

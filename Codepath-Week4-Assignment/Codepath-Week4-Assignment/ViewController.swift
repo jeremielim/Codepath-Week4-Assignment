@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     
     @IBOutlet var buttons: [UIButton]!
+    @IBOutlet weak var bubbleImageVIew: UIImageView!
     
     var homeViewController: UIViewController!
     var searchViewController: UIViewController!
@@ -34,6 +35,8 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         
+        
+        
         // assign views from the storyboard into the view
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
         searchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController")
@@ -47,6 +50,11 @@ class ViewController: UIViewController {
         // Set initial tab
         buttons[selectedIndex].selected = true
         didPressTab(buttons[selectedIndex])
+        
+        // Loop bubble
+        UIView.animateWithDuration(0.8, delay: 0, options: [.Repeat,.Autoreverse], animations: { () -> Void in
+                self.bubbleImageVIew.center.y += 10
+            }, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -104,6 +112,18 @@ class ViewController: UIViewController {
         
         // Call the viewDidAppear method of the ViewController you are adding
         vc.didMoveToParentViewController(self)
+        
+        // Check if search tab to hide bubble
+        if sender.tag == 1 {
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                self.bubbleImageVIew.alpha = 0
+            })
+        } else {
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                self.bubbleImageVIew.alpha = 1
+            })
+        }
+        
     }
     
 
