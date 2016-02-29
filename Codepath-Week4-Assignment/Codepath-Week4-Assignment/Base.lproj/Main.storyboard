@@ -57,6 +57,9 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="searchFeed" destination="5IL-Ml-KQt" id="DkU-nG-OXN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CZh-hZ-BQ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -30,12 +30,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         // access the main Storyboard through code
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        
-        
         
         // assign views from the storyboard into the view
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
